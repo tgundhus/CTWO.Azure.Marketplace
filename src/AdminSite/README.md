@@ -36,3 +36,32 @@ The web application allows to manage subscriptions, plans and offers, all from t
 | Plans |  Shows all the existing plans including private plans. It shows the Plan name, Description and the Offer the plan is tied to. It should be noted that plans for all offers by the Publisher will be displayed here. Publishers may also choose to edit certain details regarding plan activation. Changes made can be submitted by clicking Save events. |
 | Offers | Shows all current active offers. It shows the currently active Offer Names, Description and Actions that can be performed. Like with plans, offers can be edited. Publishers can add extra parameters or remove currently saved parameters by clicking Add New Row or Remove respectively. Once all these changes are made, changes should be saved. Newly added parameters for an offer will show under their respective plans.|
 
+## Installation information
+wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh; 
+chmod +x dotnet-install.sh; 
+./dotnet-install.sh -version 6.0.417; 
+$ENV:PATH="$HOME/.dotnet:$ENV:PATH"; 
+dotnet tool install --global dotnet-ef --version 6.0.1; 
+git clone https://github.com/Azure/Commercial-Marketplace-SaaS-Accelerator.git -b 7.6.2 --depth 1; 
+cd ./Commercial-Marketplace-SaaS-Accelerator/deployment; 
+.\Deploy.ps1 
+  -WebAppNamePrefix "MsMarketplace"  
+  -ResourceGroupForDeployment "Utilities"  
+  -PublisherAdminUsers "tobias.gundhus@ctwo.com,zoe.gove@ctwo.com"  
+  -Location "West Europe"
+
+, then we had to change a token fetch error in the deployment script, by replacing the current token fetch method with this
+
+Deploy ln: 406
+ (az account get-access-token --resource https://database.windows.net | ConvertFrom-Json).accessToken
+
+wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh; 
+chmod +x dotnet-install.sh; 
+./dotnet-install.sh -version 6.0.417; 
+$ENV:PATH="$HOME/.dotnet:$ENV:PATH"; 
+dotnet tool install --global dotnet-ef --version 6.0.1; 
+git clone https://github.com/tgundhus/CTWO.Azure.Marketplace.git --depth 1;  
+cd ./CTWO.Azure.Marketplace/deployment; 
+.\Upgrade.ps1 
+ -WebAppNamePrefix "MsMarketplace" 
+ -ResourceGroupForDeployment "Utilities" 
