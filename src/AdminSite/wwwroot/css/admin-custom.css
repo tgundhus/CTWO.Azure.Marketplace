@@ -1,4 +1,22 @@
-﻿body {
+﻿/* Color Theme Variables */
+:root {
+    /* Core Colors from index.html */
+    --background-dark: #1a1a1a;
+    --nav-active: #3C3F4A;
+    --border-highlight: #BFBF8C;
+    --text-light: #D5D6DD;
+    /* Existing Colors from admin-custom.css */
+    --primary-blue: #004578;
+    --success-green: #256525;
+    --danger-red: #EA2333;
+    --background-light: #F9F9F9;
+    --border-gray: #2e6da4;
+    --hover-gray: #EAE7E7;
+    --footer-gray: #E6E6E6;
+    --inactive-gray: #D0CCCC;
+}
+
+body {
     font-family: Segoe UI,Segoe UI Web,Segoe UI Symbol,Helvetica Neue,BBAlpha Sans,S60 Sans,Arial,sans-serif;
     color: black !important;
     font-size: 16px !important;
@@ -58,16 +76,8 @@
 }
 
 .cm-logo {
-    /*border-style: none;
-    width: auto;
-    padding: 8px;
-    max-width: 100%;
-    width: 30%;*/
     border-style: none;
     width: auto;
-
-    /*margin-left:-10px;*/
-    /*padding: 8px;*/
     max-height: 35px;
 }
 
@@ -79,13 +89,9 @@
 
 .cm-section-heading {
     font-family: Segoe UI,Segoe UI Web,Segoe UI Symbol,Helvetica Neue,BBAlpha Sans,S60 Sans,Arial,sans-serif;
-    /*font-family: 'Segoe UI', 'sans-serif' !important;*/
     font-size: 30px;
     font-weight: 600;
     text-align: left;
-    /*background-color: #fff;*/
-    /*border-bottom: 4px solid #2180a6;*/
-    /*text-transform: uppercase;*/
     margin-bottom: 20px;
     line-height: 40px;
     color: black;
@@ -157,7 +163,6 @@
     user-select: none;
 }
 
-
 .cm-button-default {
     color: #fff !important;
     background-color: #004578;
@@ -186,11 +191,6 @@
 }
 
     .cm-button-default:hover {
-        /*background-color: #961c1c !important;*/
-        /*border-radius: 5px;
-        padding: 12px 20px;
-        font-size: 18px;*/
-        /*font-weight: bold;*/
         color: #333;
     }
 
@@ -353,11 +353,6 @@
         color: #004578 !important;
     }
 
-/*.cm-footer {
-    background-color: #F9F9F9;
-    position: absolute !important
-}*/
-
 .cm-container {
     margin-left: 80px;
 }
@@ -394,11 +389,9 @@ a.cm-dropdown-option {
     width: 1300px !important;
 }
 
-
 .mr420 {
     margin-right: !important;
 }
-
 
 .switch {
     position: relative;
@@ -451,7 +444,6 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
     border-radius: 34px;
 }
@@ -469,37 +461,32 @@ button.navbar-toggler:focus, button.navbar-toggler:hover {
 }
 
 .admin-margin {
-    margin-left:-30px;
+    margin-left: -30px;
 }
 
 .ac-save-d {
-    text-align:right;
+    text-align: right;
 }
 
 .ac-save-i {
     background-color: #333;
 }
 
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    /*position: fixed;*/ /* Stay in place */
-    /*z-index: 1;*/ /* Sit on top */
+    display: none;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
-
 
 .modal-backdrop {
     z-index: -1;
 }
 
-/* The Close Button */
 .close {
     color: #aaa;
     float: right;

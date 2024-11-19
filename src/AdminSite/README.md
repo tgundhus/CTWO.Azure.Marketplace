@@ -62,6 +62,4 @@ $ENV:PATH="$HOME/.dotnet:$ENV:PATH";
 dotnet tool install --global dotnet-ef --version 6.0.1; 
 git clone https://github.com/tgundhus/CTWO.Azure.Marketplace.git --depth 1;  
 cd ./CTWO.Azure.Marketplace/deployment; 
-.\Upgrade.ps1 
- -WebAppNamePrefix "MsMarketplace" 
- -ResourceGroupForDeployment "Utilities" 
+.\Upgrade.ps1 -WebAppNamePrefix "MsMarketplace" -ResourceGroupForDeployment "Utilities" 
